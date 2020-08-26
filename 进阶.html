@@ -1,0 +1,25 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <input id="test" onkeydown="test(event)" onkeyup="test(event)"></input>
+    <script>
+        var oTest = document.querySelector("#test")
+      function test(ev){
+          var reg = /\s/ // space
+          ev.target.value = ev.target.value.replace(reg,'')
+      }
+
+      // \w  包括希腊字母 俄文字符 最好用0-9A-z_
+
+      // 身份证正则
+      const reg = /^[1-9]\d{5}(18|19|20)\d{2}((0[1-9])|(1[0-2]))([0-2][1-9]|10|20|30|31)\d{3}[1-9Xx]$/
+    </script>
+  </body>
+</html>
